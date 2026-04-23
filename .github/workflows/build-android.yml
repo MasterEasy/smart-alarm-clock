@@ -24,8 +24,9 @@ jobs:
       with:
         node-version: '16'
 
-    - name: Install dependencies
+    - name: Clean and install dependencies
       run: |
+        rm -rf node_modules
         npm install
         chmod +x node_modules/.bin/*
 
