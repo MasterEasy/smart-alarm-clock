@@ -37,9 +37,7 @@ jobs:
       run: npx cap copy android
 
     - name: Set up Android SDK
-      uses: android-actions/setup-android@v3
-      env:
-        SKIP_JDK_VERSION_CHECK: 'true'
+      uses: android-actions/setup-android@v2
 
     - name: Build APK
       run: |
