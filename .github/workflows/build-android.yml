@@ -33,8 +33,11 @@ jobs:
     - name: Build web app
       run: npm run build
 
-    - name: Capacitor sync
-      run: npx cap sync android
+    - name: Create capacitor-cordova-android-plugins directory
+      run: mkdir -p android/capacitor-cordova-android-plugins
+
+    - name: Create cordova.variables.gradle file
+      run: echo "// Empty variables file" > android/capacitor-cordova-android-plugins/cordova.variables.gradle
 
     - name: Download Android SDK
       run: |
